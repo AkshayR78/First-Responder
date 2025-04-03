@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraksha - First Responder Request</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Suraksha Emergency Request</h1>
+
+    <!-- Emergency Request Form -->
+    <form id="emergencyForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+
+        <label for="requestType">Request Type:</label>
+        <select id="requestType">
+            <option value="First Responder">First Responder</option>
+            <option value="Ambulance">Ambulance</option>
+        </select>
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" placeholder="Enter location" required>
+
+        <button type="submit">Request</button>
+    </form>
+
+    <div id="responderDetails"></div>
+
+    <!-- Map Container -->
+    <div id="map" style="height: 500px;"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://unpkg.com/socket.io-client/dist/socket.io.min.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
